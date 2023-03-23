@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Color Generator-02v</title>
+      <!-- link css file -->
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+      <!-- main container for color code generator hex and rgb*/ -->
+      <div id="container">
+         <!-- color-generator and prpreset_customcolor 2 div -->
+         <div id="color-generatorAndpreset_customcolor">
+            <!-- color generator main container  -->
+            <div id="color-generator-container">
+               <!-- color generator container top left title & button-->
+               <div class="toptitle">
+                  <!-- left title -->
+                  <h4 class="topleft-h4 h4">Display Color</h4>
+                  <!-- random color generate btn -->
+                  <button class="btn" id="random-color-btn">Random Color</button>
+               </div>
+               <br>
+               <!-- Display color area -->
+               <div id="display-color"></div>
+               <br>
+               <!-- copy color and copy to clipboard div -->
+               <div id="copyCo-copytoClicp">
+                  <h4 class="h4">Change & Copy Color</h4>
+                  <!-- save and copy btn -->
+                  <div id="save-andcopy-btn">
+                     <!-- save btn -->
+                     <button class="btn" id="save-btn">Save Color</button>
+                     <!-- copy btn -->
+                     <button class="btn" id="copy-btn">Copy to Clipboard</button>
+                  </div>
+               </div>
+               <!-- select copy mode text & select hex rgb color radio btn-->
+               <div id="selectCoMo-selectHRcolor">
+                  <h4 class="h4">Select Copy Mode</h4>
+                  <!-- 2 radio btn -->
+                  <div id="radio-btn2">
+                     <form>
+                        <!-- radio btn hex -->
+                        <div class="radiohex">
+                           <input type="radio" name="color" value="hex" id="hex">
+                           <label for="hex" class="radio-label">HEX</label>
+                        </div>
+                        <br>
+                        <!-- radio btn rgb -->
+                        <div class="radiorgb">
+                           <input type="radio" name="color" value="rgb" id="rgb">
+                           <label for="rgb" class="radio-label rgb">RGB </label>
+                        </div>
+                        <br>
+                     </form>
+                  </div>
+               </div>
+               <!-- rgb and hex color code input field display  -->
+               <div id="colorcodeDisplay">
+                  <!-- hex Color input field-->
+                  <div id="hex-color">
+                     <h4>HEX</h4>
+                     <div id="hex-withsymbol">
+                        <div id="withSymbol">#</div>
+                        <input type="text" id="input-fieldForHEX" name="input-fieldforRGB" maxlength="6" placeholder="DOFF9">
+                     </div>
+                  </div>
+                  <!-- rgb color input field -->
+                  <div id="rgb-color">
+                     <h4>RGB</h4>
+                     <input type="text" id="input-fieldForRGB" name="input-fieldforRGB" placeholder="rgb (208, 255, 249)" disabled>
+                  </div>
+               </div>
+               <!-- range main title -->
+               <h4 class="h4 adjustRGBcolorsh1">Adjust RGB colors</h4>
+               <br>
+               <!-- 3 rgb range bar wrapper  -->
+               <div id="range-wrapper">
+                  <!-- range for red -->
+                  <div class="range range-red">
+                     <!-- range bar title for red-->
+                     <div class="rangebar-title redrangebar-title">
+                        <p>Red</p>
+                        <p id="red_color_code">208</p>
+                     </div>
+                     <input type="range" min="0" max="255" value="208" name="" id="color-slider-red" class="color-slider" >
+                  </div>
+                  <!-- range for green -->
+                  <div class="range range-green">
+                     <!-- range bar title for green -->
+                     <div class="rangebar-title greenrangebar-title">
+                        <p>Green</p>
+                        <p id="green_color_code">255</p>
+                     </div>
+                     <input type="range" min="0" max="255" value="255" name="" id="color-slider-green" class="color-slider" >
+                  </div>
+                  <!-- range for blue -->
+                  <div class="range range-blue">
+                     <!-- range bar title for blue -->
+                     <div class="rangebar-title bluerangebar-title">
+                        <p>Blue</p>
+                        <p id="blue_color_code">249</p>
+                     </div>
+                     <input type="range" min="0" max="255" value="249" name="" id="color-slider-blue" class="color-slider" >
+                  </div>
+               </div>
+            </div>
+            <!-- preset color and custom color plate section -->
+            <div id="presetandcustom-color">
+               <!-- preset color div -->
+               <div id="preset-color">
+                  <div class="preset-title">
+                     <h4 class="h4">Preset Colors</h4>
+                  </div>
+                  <!-- preset color wrapper -->
+                  <div id="preset-color-list_wrapper" class="preset-color-list_wrapper">
+                     <!-- here dom create 18 child using for loop-->
+                  </div>
+               </div>
+               <!-- custom color div dsplay for color plate -->
+               <div id="custom-color">
+                  <div class="custom-title">
+                     <h4 class="h4">Custom Colors</h4>
+                     <h6>Double click to remove</h6>
+                  </div>
+                  <!-- custom color wrapper -->
+                  <div id="custom-color-list_wrapper" class="custom-color-list_wrapper">
+                     <!-- here dom create color plate child div when save btn cliked  -->
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- link script file -->
+      <script src="script.js"></script>
+   </body>
+</html>
